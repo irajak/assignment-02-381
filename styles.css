@@ -1,16 +1,23 @@
-/* Reset */
+/* 
+Iraj Akbar  (30146997)
+Azlfa Anwar (30176659)
+*/
+
+/* Part 1 - Homepage */
+
+/* reset */
 * {
     margin: 0;
     padding: 0;
 }
   
-/* Body */
+/* body */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
 }
   
-/* Header */
+/* header */
 header {
     background-color: #004080;
     padding: 20px;
@@ -20,8 +27,12 @@ header {
     align-items: center;
     color: white;
 }
+
+header h2 {
+    display: none;
+}
   
-/* Navigation */
+/* navigation */
 nav {
     display: flex;
     justify-content: space-around;
@@ -41,13 +52,17 @@ nav a:hover {
     text-decoration: none;
 }
   
-/* Main content area */
+/* main - content */
 main {
     background-color: #d4d4d4;
-    padding: 20px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
   
-/* About Section */
+/* about */
 #about {
     text-align: center;
     padding: 20px;
@@ -84,7 +99,7 @@ main {
     margin-bottom: 0;
 }
   
-/* Footer */
+/* footer */
 footer {
     background-color: #004080;
     color: white;
@@ -97,3 +112,90 @@ footer {
     width: 100%;
 }
   
+/* Login */
+
+/* main area (login form) */
+.login-title {
+    font-size: 24px;
+    color: #003366;
+    margin: 20px 0 25px 0;
+    align-self: center;
+}
+
+.login-container {
+    background-color: #d4d4d4;
+    padding: 30px;
+    margin: 0 150px 30px 150px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: calc(100% - 300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* input fields container */
+.input-group {
+    margin-bottom: 25px;
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group:last-child {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* input fields */
+input[type="text"],
+input[type="password"] {
+    background-color: lightyellow;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid darkgrey;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+/* login button */
+.login-button {
+    background-color: #008000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.login-button:hover {
+    background-color: #006600;
+}
+
+/* links outside the box */
+.login-links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-links a {
+    color: #004080;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
