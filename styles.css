@@ -1,4 +1,99 @@
-/* 
-Iraj Akbar (30146997)
-Azlfa Anwar (
-*/
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+  
+/* Header */
+header {
+    background-color: #004080;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+  
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+}
+  
+nav a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 0 20px;
+}
+  
+nav a:hover {
+    text-decoration: none;
+}
+  
+/* Main content area */
+main {
+    background-color: #d4d4d4;
+    padding: 20px;
+}
+  
+/* About Section */
+#about {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+  
+#about h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #003366;
+}
+  
+#about p {
+    margin-bottom: 20px;
+}
+  
+#about ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+  
+.features-title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+  
+#about ul li {
+    text-align: center;
+    margin: 0 0 20px 0; 
+}
+  
+#about ul li:last-child {
+    margin-bottom: 0;
+}
+  
+/* Footer */
+footer {
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+  
