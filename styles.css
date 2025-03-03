@@ -56,7 +56,7 @@ nav a:hover {
 /* main content */
 main {
     background-color: #d4d4d4;
-    padding: 0;
+    padding: 0 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,11 +65,16 @@ main {
     box-sizing: border-box;
 }
 
+/* Remove padding for leaderboard page */
+body:has(.leaderboard) main {
+    padding: 0;  /* No padding when leaderboard is present */
+}
+
 /* about */
 #about {
     text-align: center;
     padding: 20px;
-    margin: 10px 20px;
+    margin: 10px 40px;
 }
 
 #about h2 {
@@ -201,23 +206,23 @@ input[type="password"] {
 /* course view */
 .course-section {
     background-color: #d4d4d4;
-    padding: 20px;
-    margin: 20px;
+    padding: 0;
+    margin: 0;
     border-radius: 10px;
-    width: calc(100% - 40px);
+    width: 100%;  /* Let it fill the padded main area */
     box-sizing: border-box;
 }
 
 .Enrolled h2, .course-section h2 {
-    color: #003366;
-    margin-bottom: 15px;
-    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-size: 1.3em;
     text-align: center;
+    color: #003366;
 }
 
 .Enrolled hr {
     border: none;
-    border-top: 1px solid #003366;
+    border-top: 2px solid #e0e0e0;
     margin: 0 0 15px 0;
 }
 
@@ -250,18 +255,32 @@ section.Enrolled + div + br + br {
 
 section.Enrolled:last-of-type {
     margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+section.Enrolled:last-of-type td > div {
+    gap: 8px;
+}
+
+section.Enrolled:last-of-type h2 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    text-align: center;
+    color: #003366;
+    border-bottom: 2px solid #666666;
+    padding-bottom: 10px;
 }
 
 td > div {
     background-color: #e6f2ff;
-    padding: 15px;
+    padding: 20px 20px 10px 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 3px;
     height: 100%;
     box-sizing: border-box;
 }
@@ -269,11 +288,14 @@ td > div {
 td > div img {
     width: 100%;
     height: auto;
-    margin-bottom: 0;
+    margin: 0;
+    object-fit: cover;
+    display: block;
 }
 
 td > div p {
     margin: 0;
+    font-size: 0.95em;
 }
 
 td > div a {
@@ -335,22 +357,22 @@ button[style*="rgb(252, 133, 133)"]:hover {
 .enrolled-courses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 20px;
+    gap: 15px;
+    padding: 10px;
 }
 
 .pending-courses {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 20px;
+    gap: 15px;
+    padding: 10px;
 }
 
 .course-tile {
     background-color: #e6f2ff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .accept-btn {
@@ -397,10 +419,10 @@ button[style*="rgb(252, 133, 133)"]:hover {
 .quiz-details {
     background-color: #b7d7e4;
     padding: 30px;
-    margin: 1px auto;
+    margin: 1px 40px;
     text-align: center;
     border-radius: 5px;
-    width: 90vw;
+    width: calc(100% - 80px);
     max-width: 1000px;
 }
 
@@ -419,7 +441,7 @@ button[style*="rgb(252, 133, 133)"]:hover {
 }
 
 .question {
-    margin: 15px 250px;
+    margin: 15px 40px;
 }
 
 .question:not(:first-of-type) {
@@ -609,10 +631,6 @@ main > br {
     display: none;
 }
 
-main {
-    padding: 0;
-}
-
 .leaderboard {
     width: 100%;
     table-layout: fixed;
@@ -628,3 +646,27 @@ main {
 .leaderboard col:nth-child(3) { width: 300px; }     /* name */
 .leaderboard col:nth-child(4) { width: 300px; }     /* total score */
 .leaderboard col:nth-child(5) { width: auto; }      /* course */
+
+/* Remove all the individual padding we added */
+#about,
+.login-container,
+.course-section,
+.quiz-details,
+.question {
+    padding-left: initial;
+    padding-right: initial;
+}
+
+/* Add a new container for non-leaderboard content */
+.content-wrapper {
+    width: 100%;
+}
+
+/* Keep leaderboard at full width */
+.leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 60px 0 0 0;
+    text-align: center;
+    table-layout: fixed;
+}
