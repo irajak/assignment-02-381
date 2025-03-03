@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Course View - LMS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -18,13 +18,15 @@
         </nav>
     </div>
     <main>
-        <label for="term">Select Term:</label>
-        <select id="term" name="term">
-            <option value="Winter 2025">Winter 2025</option>
-            <option value="Winter 2024">Winter 2024</option>
-            <option value="Fall 2025">Fall 2025</option>
-            <option value="Fall 2024">Fall 2024</option>
-        </select>
+        <div class="term-container">
+            <label for="term">Select Term:</label>
+            <select id="term" name="term">
+                <option value="Winter 2025">Winter 2025</option>
+                <option value="Winter 2024">Winter 2024</option>
+                <option value="Fall 2025">Fall 2025</option>
+                <option value="Fall 2024">Fall 2024</option>
+            </select>
+        </div>
         
         <section class="Enrolled">
 			<!-- Courses in which the student is enrolled -->
@@ -80,10 +82,6 @@
             </table> 
         </section>
         
-        <div>
-        </div>
-        <br>
-        <br>
         <section class="Enrolled">
 			<!-- Courses in which the student is enrolled -->
             <!-- Display Course 1, 2, and 3 in the same line -->
@@ -96,8 +94,10 @@
                             <img src="course2.jpg" alt="Course 2" width="250">
                             <p>Course Name: Data Science</p>
                             <p>Course Code: DS102</p>
-                            <button style="background-color: rgb(153, 255, 153);">Accept</button>
-                            <button style="background-color: rgb(252, 133, 133);">Decline</button>
+                            <div class="button-container">
+                                <button style="background-color: rgb(153, 255, 153);">Accept</button>
+                                <button style="background-color: rgb(252, 133, 133);">Decline</button>
+                            </div>
                         </div>
                     </td> 
                     <td>
@@ -105,8 +105,10 @@
                             <img src="course2.jpg" alt="Course 2" width="250">
                             <p>Course Name: Machine Learning</p>
                             <p>Course Code: ML105</p>
-                            <button style="background-color: rgb(153, 255, 153);">Accept</button>
-                            <button style="background-color: rgb(252, 133, 133);">Decline</button>
+                            <div class="button-container">
+                                <button style="background-color: rgb(153, 255, 153);">Accept</button>
+                                <button style="background-color: rgb(252, 133, 133);">Decline</button>
+                            </div>
                         </div>
                     </td> 
                 </tr>

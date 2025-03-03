@@ -207,3 +207,210 @@ input[type="password"] {
 .login-links a:hover {
     text-decoration: underline;
 }
+
+/* Course View Layout */
+.course-section {
+    background-color: #d4d4d4;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+/* Section Headers */
+.Enrolled h2, .course-section h2 {
+    color: #003366;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Add line after headers */
+.Enrolled hr {
+    border: none;
+    border-top: 1px solid #003366;
+    margin: 0 0 15px 0;
+}
+
+/* Course Tables */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2px;
+    table-layout: fixed;
+    margin: 0;
+}
+
+/* Table Cells */
+td {
+    vertical-align: top;
+    width: 33.33%;
+}
+
+/* Remove row spacing since we're using padding */
+tr + tr {
+    margin-top: 0;  /* Remove this as we're using padding-bottom on td */
+}
+
+/* Adjust section spacing */
+.Enrolled {
+    margin-bottom: 2px;  /* Reduced to match other spacing */
+}
+
+/* Remove the extra br tags spacing */
+section.Enrolled + div,
+section.Enrolled + div + br,
+section.Enrolled + div + br + br {
+    display: none;
+}
+
+/* Add space before Pending section */
+section.Enrolled:last-of-type {
+    margin-top: 30px;
+}
+
+/* Course Tiles */
+td > div {
+    background-color: #e6f2ff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+td > div img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0; /* Remove margin since we're using gap */
+}
+
+td > div p {
+    margin: 0; /* Remove default margins since we're using gap */
+}
+
+/* Course Links */
+td > div a {
+    display: inline-block;
+    color: #004080;
+    text-decoration: underline;
+    margin: 0;
+}
+
+td > div a:hover {
+    color: #002b59;  /* Darker shade for hover */
+}
+
+/* Adjust pending invitations table */
+section.Enrolled:last-of-type td {
+    width: 50%;  /* For 2 columns in pending section */
+}
+
+/* Term Selection Container */
+.term-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Term Selection */
+select {
+    background-color: lightyellow;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Course Action Buttons */
+button {
+    padding: 5px 10px;  /* Smaller padding */
+    border: none;
+    border-radius: 3px;  /* Smaller border radius */
+    cursor: pointer;
+    color: white;
+    margin: 0 3px;  /* Smaller horizontal margin between buttons */
+    font-size: 0.9em;  /* Smaller font size */
+}
+
+button[style*="rgb(153, 255, 153)"] {
+    background-color: #4CAF50 !important;
+}
+
+button[style*="rgb(153, 255, 153)"]:hover {
+    background-color: #265e28 !important;
+}
+
+button[style*="rgb(252, 133, 133)"] {
+    background-color: #D32F2F !important;
+}
+
+button[style*="rgb(252, 133, 133)"]:hover {
+    background-color: #821b1b !important;
+}
+
+/* Enrolled Courses Grid */
+.enrolled-courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Pending Courses Grid */
+.pending-courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Course Tiles */
+.course-tile {
+    background-color: #e6f2ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Action Buttons */
+.accept-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accept-btn:hover {
+    background-color: #265e28;
+}
+
+.decline-btn {
+    background-color: #D32F2F;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.decline-btn:hover {
+    background-color: #821b1b;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 0;  /* Remove margin since we're using gap in the parent div */
+}
