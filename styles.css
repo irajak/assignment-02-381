@@ -3,15 +3,12 @@ Iraj Akbar  (30146997)
 Azlfa Anwar (30176659)
 */
 
-/* Part 1 - Homepage */
-
-/* reset */
+/* homepage */
 * {
     margin: 0;
     padding: 0;
 }
-  
-/* body */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -19,8 +16,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-  
-/* header */
+
 header {
     background-color: #004080;
     padding: 20px;
@@ -36,7 +32,7 @@ header {
 header h2 {
     display: none;
 }
-  
+
 /* navigation */
 nav {
     display: flex;
@@ -44,68 +40,68 @@ nav {
     background-color: #003366;
     color: white;
     padding: 10px;
+    text-align: center;
 }
-  
+
 nav a {
-    font-size: 16px;
     color: white;
     text-decoration: none;
-    padding: 0 20px;
+    margin: 0 10px;
 }
-  
+
 nav a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
-  
-/* main - content */
+
+/* main content */
 main {
     background-color: #d4d4d4;
-    padding: 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    flex: 1;  /* This will make main take up remaining space */
+    flex: 1;
     box-sizing: border-box;
 }
-  
+
 /* about */
 #about {
     text-align: center;
     padding: 20px;
     margin: 10px 20px;
 }
-  
+
 #about h2 {
     margin-top: 0;
     margin-bottom: 20px;
     color: #003366;
 }
-  
+
 #about p {
     margin-bottom: 20px;
 }
-  
+
 #about ul {
     list-style-type: none; 
     padding-left: 0;
 }
-  
+
 .features-title {
     font-weight: bold;
     display: block;
     margin-bottom: 20px;
 }
-  
+
 #about ul li {
     text-align: center;
     margin: 0 0 10px 0;
 }
-  
+
 #about ul li:last-child {
     margin-bottom: 0;
 }
-  
+
 /* footer */
 footer {
     background-color: #004080;
@@ -119,10 +115,8 @@ footer {
     width: 100%;
     box-sizing: border-box;
 }
-  
-/* Login */
 
-/* main area (login form) */
+/* login */
 .login-title {
     font-size: 24px;
     color: #003366;
@@ -143,7 +137,6 @@ footer {
     box-sizing: border-box;
 }
 
-/* input fields container */
 .input-group {
     margin-bottom: 25px;
     text-align: center;
@@ -165,7 +158,6 @@ footer {
     text-align: center;
 }
 
-/* input fields */
 input[type="text"],
 input[type="password"] {
     background-color: lightyellow;
@@ -176,7 +168,6 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-/* login button */
 .login-button {
     background-color: #008000;
     color: white;
@@ -191,7 +182,6 @@ input[type="password"] {
     background-color: #006600;
 }
 
-/* links outside the box */
 .login-links {
     text-align: center;
     margin-top: 10px;
@@ -208,7 +198,7 @@ input[type="password"] {
     text-decoration: underline;
 }
 
-/* Course View Layout */
+/* course view */
 .course-section {
     background-color: #d4d4d4;
     padding: 20px;
@@ -218,7 +208,6 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-/* Section Headers */
 .Enrolled h2, .course-section h2 {
     color: #003366;
     margin-bottom: 15px;
@@ -226,14 +215,12 @@ input[type="password"] {
     text-align: center;
 }
 
-/* Add line after headers */
 .Enrolled hr {
     border: none;
     border-top: 1px solid #003366;
     margin: 0 0 15px 0;
 }
 
-/* Course Tables */
 table {
     width: 100%;
     border-collapse: separate;
@@ -242,35 +229,29 @@ table {
     margin: 0;
 }
 
-/* Table Cells */
 td {
     vertical-align: top;
     width: 33.33%;
 }
 
-/* Remove row spacing since we're using padding */
 tr + tr {
-    margin-top: 0;  /* Remove this as we're using padding-bottom on td */
+    margin-top: 0;
 }
 
-/* Adjust section spacing */
 .Enrolled {
-    margin-bottom: 2px;  /* Reduced to match other spacing */
+    margin-bottom: 2px;
 }
 
-/* Remove the extra br tags spacing */
 section.Enrolled + div,
 section.Enrolled + div + br,
 section.Enrolled + div + br + br {
     display: none;
 }
 
-/* Add space before Pending section */
 section.Enrolled:last-of-type {
     margin-top: 30px;
 }
 
-/* Course Tiles */
 td > div {
     background-color: #e6f2ff;
     padding: 15px;
@@ -288,14 +269,13 @@ td > div {
 td > div img {
     width: 100%;
     height: auto;
-    margin-bottom: 0; /* Remove margin since we're using gap */
+    margin-bottom: 0;
 }
 
 td > div p {
-    margin: 0; /* Remove default margins since we're using gap */
+    margin: 0;
 }
 
-/* Course Links */
 td > div a {
     display: inline-block;
     color: #004080;
@@ -304,15 +284,13 @@ td > div a {
 }
 
 td > div a:hover {
-    color: #002b59;  /* Darker shade for hover */
+    color: #002b59;
 }
 
-/* Adjust pending invitations table */
 section.Enrolled:last-of-type td {
-    width: 50%;  /* For 2 columns in pending section */
+    width: 50%;
 }
 
-/* Term Selection Container */
 .term-container {
     display: flex;
     align-items: center;
@@ -321,7 +299,6 @@ section.Enrolled:last-of-type td {
     margin: 20px 0;
 }
 
-/* Term Selection */
 select {
     background-color: lightyellow;
     border-radius: 5px;
@@ -329,15 +306,14 @@ select {
     border: 1px solid #ccc;
 }
 
-/* Course Action Buttons */
 button {
-    padding: 5px 10px;  /* Smaller padding */
+    padding: 5px 10px;
     border: none;
-    border-radius: 3px;  /* Smaller border radius */
+    border-radius: 3px;
     cursor: pointer;
     color: white;
-    margin: 0 3px;  /* Smaller horizontal margin between buttons */
-    font-size: 0.9em;  /* Smaller font size */
+    margin: 0 3px;
+    font-size: 0.9em;
 }
 
 button[style*="rgb(153, 255, 153)"] {
@@ -356,7 +332,6 @@ button[style*="rgb(252, 133, 133)"]:hover {
     background-color: #821b1b !important;
 }
 
-/* Enrolled Courses Grid */
 .enrolled-courses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -364,7 +339,6 @@ button[style*="rgb(252, 133, 133)"]:hover {
     padding: 20px;
 }
 
-/* Pending Courses Grid */
 .pending-courses {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -372,7 +346,6 @@ button[style*="rgb(252, 133, 133)"]:hover {
     padding: 20px;
 }
 
-/* Course Tiles */
 .course-tile {
     background-color: #e6f2ff;
     padding: 20px;
@@ -380,7 +353,6 @@ button[style*="rgb(252, 133, 133)"]:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Course Action Buttons */
 .accept-btn {
     background-color: #4CAF50;
     color: white;
@@ -407,15 +379,14 @@ button[style*="rgb(252, 133, 133)"]:hover {
     background-color: #821b1b;
 }
 
-/* Button Container */
 .button-container {
     display: flex;
     justify-content: center;
     gap: 6px;
-    margin: 0;  /* Remove margin since we're using gap in the parent div */
+    margin: 0;
 }
 
-/* Quiz Banner */
+/* quiz */
 .quiz-banner {
     width: 100%;
     height: 150px;
@@ -423,24 +394,22 @@ button[style*="rgb(252, 133, 133)"]:hover {
     margin-bottom: 1px;
 }
 
-/* Quiz Details Container */
 .quiz-details {
     background-color: #b7d7e4;
     padding: 30px;
     margin: 1px auto;
     text-align: center;
     border-radius: 5px;
-    width: 90vw;  /* Changed to viewport width units */
-    max-width: 1000px;  /* Keep max-width as a safeguard */
+    width: 90vw;
+    max-width: 1000px;
 }
 
-/* Quiz Details Text */
 .quiz-details h2,
-.quiz-details p:first-of-type {  /* Course Code */
+.quiz-details p:first-of-type {
     font-size: 1.8em;
     color: #003366;
     margin-bottom: 10px;
-    font-weight: bold;  /* Added bold */
+    font-weight: bold;
 }
 
 .quiz-details p {
@@ -449,13 +418,12 @@ button[style*="rgb(252, 133, 133)"]:hover {
     line-height: 1.6;
 }
 
-/* Questions */
 .question {
     margin: 15px 250px;
 }
 
 .question:not(:first-of-type) {
-    margin-top: 5px;  /* Reduced space after first Submit Answer */
+    margin-top: 5px;
 }
 
 .question h3 {
@@ -470,7 +438,6 @@ button[style*="rgb(252, 133, 133)"]:hover {
     color: black;
 }
 
-/* Answer Options */
 .options {
     background-color: #cacaca;
     padding: 15px;
@@ -484,22 +451,21 @@ button[style*="rgb(252, 133, 133)"]:hover {
 
 .options label {
     display: block;
-    margin: 10px 0;  /* Reduced from 15px back to 10px */
+    margin: 10px 0;
     padding-left: 10px;
 }
 
 .options label:first-child {
-    margin-top: 0;  /* Remove top margin from first option */
+    margin-top: 0;
 }
 
 .options label:last-child {
-    margin-bottom: 0;  /* Remove bottom margin from last option */
+    margin-bottom: 0;
 }
 
-/* Submit Buttons */
 .submit-answer {
     display: block;
-    margin: 15px auto 5px;  /* Reduced bottom margin to 5px */
+    margin: 15px auto 5px;
     background-color: #b7d7e4;
     color: black;
     padding: 8px 15px;
@@ -508,10 +474,9 @@ button[style*="rgb(252, 133, 133)"]:hover {
     cursor: pointer;
 }
 
-/* Finish Button */
 .finish-quiz {
     display: block;
-    margin: 5px auto;  /* Reduced from 15px to 5px */
+    margin: 5px auto 30px;
     background-color: #D32F2F;
     color: white;
     padding: 8px 15px;
@@ -519,3 +484,147 @@ button[style*="rgb(252, 133, 133)"]:hover {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.finish-container {
+    margin-bottom: 30px;
+}
+
+/* leaderboard */
+.leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 60px 0 0 0;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.leaderboard th,
+.leaderboard td {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border: 3px solid;
+}
+
+.leaderboard tr:nth-child(1) th {
+    border-color: #4CAF50;
+}
+
+.leaderboard tr:nth-child(2) th {
+    border-color: #f9f9f9;
+}
+
+.leaderboard tr:nth-child(3) td {
+    border-color: #FFD700;
+}
+
+.leaderboard tr:nth-child(3) td {
+    background-color: #FFD700;
+    border-color: #f9f9f9;
+}
+
+.leaderboard tr:nth-child(4) td,
+.leaderboard tr:nth-child(5) td {
+    background-color: #C0C0C0;
+    border-color: #f9f9f9;
+}
+
+.leaderboard tr:nth-child(6) td {
+    background-color: #CD7F32;
+    border-color: #f9f9f9;
+}
+
+.leaderboard th {
+    border-color: #f9f9f9;
+}
+
+.leaderboard tr:nth-child(odd):nth-child(n+7) td,
+.leaderboard tr:nth-child(even):nth-child(n+7) td {
+    border-color: #f9f9f9;
+}
+
+.leaderboard th[colspan="5"] {
+    font-size: 36px;
+    padding: 0px;
+    background-color: #4CAF50;
+    color: white;
+    border-color: #f9f9f9;
+}
+
+.leaderboard tr:nth-child(2) th {
+    background-color: #f9f9f9;
+    color: black;
+    font-size: 20px;
+    padding: 0px;
+}
+
+.leaderboard td:nth-child(2) {
+    text-align: center !important;
+}
+
+.leaderboard td:nth-child(n) {
+    text-align: center !important;
+}
+
+.leaderboard td,
+.leaderboard th {
+    padding: 0px;
+}
+
+.leaderboard img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: block;
+    margin: 0 auto;
+}
+
+.leaderboard tr:nth-child(3) {
+    background-color: #FFD700;
+}
+
+.leaderboard tr:nth-child(4),
+.leaderboard tr:nth-child(5) {
+    background-color: #C0C0C0;
+}
+
+.leaderboard tr:nth-child(6) {
+    background-color: #CD7F32;
+}
+
+.leaderboard tr:nth-child(odd):nth-child(n+7) {
+    background-color: #f9f9f9;
+}
+
+.leaderboard tr:nth-child(even):nth-child(n+7) {
+    background-color: #e4e2e2;
+}
+
+.leaderboard tr {
+    font-size: 20px;
+}
+
+main > br {
+    display: none;
+}
+
+main {
+    padding: 0;
+}
+
+.leaderboard {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.leaderboard colgroup {
+    display: table-column-group;
+}
+
+
+.leaderboard col:nth-child(1) { width: 150px; }     /* rank */
+.leaderboard col:nth-child(2) { width: 300px; }     /* profile pic */
+.leaderboard col:nth-child(3) { width: 300px; }     /* name */
+.leaderboard col:nth-child(4) { width: 300px; }     /* total score */
+.leaderboard col:nth-child(5) { width: auto; }      /* course */
