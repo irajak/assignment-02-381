@@ -65,9 +65,9 @@ main {
     box-sizing: border-box;
 }
 
-/* Remove padding for leaderboard page */
+/* remove padding for leaderboard  */
 body:has(.leaderboard) main {
-    padding: 0;  /* No padding when leaderboard is present */
+    padding: 0;  /
 }
 
 /* about */
@@ -209,7 +209,7 @@ input[type="password"] {
     padding: 0;
     margin: 0;
     border-radius: 10px;
-    width: 100%;  /* Let it fill the padded main area */
+    width: 100%; 
     box-sizing: border-box;
 }
 
@@ -647,7 +647,6 @@ main > br {
 .leaderboard col:nth-child(4) { width: 300px; }     /* total score */
 .leaderboard col:nth-child(5) { width: auto; }      /* course */
 
-/* Remove all the individual padding we added */
 #about,
 .login-container,
 .course-section,
@@ -657,12 +656,10 @@ main > br {
     padding-right: initial;
 }
 
-/* Add a new container for non-leaderboard content */
 .content-wrapper {
     width: 100%;
 }
 
-/* Keep leaderboard at full width */
 .leaderboard {
     width: 100%;
     border-collapse: collapse;
